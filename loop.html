@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iteration Example</title>
+</head>
+<body>
+<h1>Iteration Example</h1>
+<script>
+    // Array of numbers
+    const numbers = [1, 2, 3, 4, 5];
+// Using a for loop to square each number and display the result
+    console.log('Using for loop:');
+    for (let i = 0; i < numbers.length; i++) {
+      const squaredNumber = numbers[i] ** 2;
+      console.log(`Square of ${numbers[i]}: ${squaredNumber}`);
+    }
+// Using a while loop to cube each number and display the result
+    console.log('\nUsing while loop:');
+    let j = 0;
+    while (j < numbers.length) {
+      const cubedNumber = numbers[j] ** 3;
+      console.log(`Cube of ${numbers[j]}: ${cubedNumber}`);
+      j++;
+    }
+  </script>
+</body>
+</html>

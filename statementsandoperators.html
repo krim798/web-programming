@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Rectangle Area Calculator</title> 
+</head> 
+<body> 
+ <h1>Rectangle Area Calculator</h1> 
+ <script> 
+ // Define variables for length and width 
+ var length = 10; // numeric data type
+ var width = 5; // numeric data type
+ // Calculate the area using the multiplication operator 
+ var area = length * width;
+ // Display the results using console.log and alert 
+ console.log("Length:", length);
+ console.log("Width:", width);
+ console.log("Area:", area);
+ // Use conditional statements to determine the type of the area 
+ if (area > 50) { 
+ console.log("This is a large rectangle.");
+ } else { 
+ console.log("This is a small rectangle.");
+ } 
+ // Use a loop to display a message multiple times 
+ for (var i = 0; i < 3; i++) {
+ console.log("Iteration", i + 1);
+ } 
+ // Define a function to calculate the area 
+ function calculateArea(length, width) { 
+ return length * width;
+ } 
+ // Call the function and display the result 
+ var customArea = calculateArea(8, 4);
+ console.log("Custom Area:", customArea);
+ // Use a switch statement to check different cases 
+ var shape = "rectangle";
+ switch (shape) { 
+ case "circle": 
+ console.log("This is a circle.");
+ break;
+ case "rectangle": 
+ console.log("This is a rectangle.");
+ break;
+ default: 
+ console.log("Unknown shape.");
+ } 
+ </script> 
+</body> 
+</html>

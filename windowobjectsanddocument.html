@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Application</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My JavaScript Application!</h1>
+
+  <button onclick="performActions()">Click me!</button>
+
+  <script>
+    function performActions() {
+      // Accessing the window object
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      // Displaying an alert using the window object
+      window.alert(`Window Width: ${windowWidth}px\nWindow Height: ${windowHeight}px`);
+
+      // Accessing the document object
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = 'A new paragraph added dynamically!';
+
+      // Appending the new paragraph to the body of the document
+      document.body.appendChild(newParagraph);
+
+      // Changing the background color of the document
+      document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+      // Generate a random hex color code
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Person Information App</title>
+</head>
+<body>
+<h1>Person Information App</h1>
+<script>
+   const Person = {
+     firstName: '',
+     lastName: '',
+     age: 0,
+     setDetails: function (firstName, lastName, age) {
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.age = age;
+     },
+     displayInfo: function () {
+       alert(`Name: ${this.firstName} ${this.lastName}\nAge: ${this.age} years`);
+     }
+   };
+   const johnDoe = Object.create(Person);
+   johnDoe.setDetails('John', 'Doe', 30);
+   // Display information about the person
+   johnDoe.displayInfo();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generator</title>
+</head>
+<body>
+
+  <h1>Random Number Generator</h1>
+
+  <button onclick="generateRandomNumber()">Generate Random Number</button>
+
+  <p id="randomNumberDisplay"></p>
+
+  <button onclick="calculateSquare()">Calculate Square</button>
+  <p id="squareResult"></p>
+
+  <button onclick="calculateCube()">Calculate Cube</button>
+  <p id="cubeResult"></p>
+
+  <button onclick="checkEvenOdd()">Check Even/Odd</button>
+  <p id="evenOddResult"></p>
+
+  <script>
+    function generateRandomNumber() {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      document.getElementById('randomNumberDisplay').innerText = `Random Number: ${randomNumber}`;
+    }
+
+    function calculateSquare() {
+      const randomNumber = parseFloat(document.getElementById('randomNumberDisplay').innerText.split(' ')[2]);
+      const squareResult = randomNumber * randomNumber;
+      document.getElementById('squareResult').innerText = `Square: ${squareResult}`;
+    }
+
+    function calculateCube() {
+      const randomNumber = parseFloat(document.getElementById('randomNumberDisplay').innerText.split(' ')[2]);
+      const cubeResult = randomNumber ** 3;
+      document.getElementById('cubeResult').innerText = `Cube: ${cubeResult}`;
+    }
+
+    function checkEvenOdd() {
+      const randomNumber = parseFloat(document.getElementById('randomNumberDisplay').innerText.split(' ')[2]);
+      const result = randomNumber % 2 === 0 ? 'Even' : 'Odd';
+      document.getElementById('evenOddResult').innerText = `Number is ${result}`;
+    }
+  </script>
+
+</body>
+</html>

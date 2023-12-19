@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+</head>
+<body>
+
+  <h1>Length Converter</h1>
+
+  <label for="inputValue">Enter Length:</label>
+  <input type="number" id="inputValue" placeholder="Enter length..." step="any">
+
+  <label for="selectUnit">Select Unit:</label>
+  <select id="selectUnit">
+    <option value="meters">Meters</option>
+    <option value="feet">Feet</option>
+  </select>
+
+  <button onclick="convertLength()">Convert</button>
+
+  <p id="result"></p>
+
+  <script>
+    function convertLength() {
+      // Get input value and selected unit
+      const inputValue = parseFloat(document.getElementById('inputValue').value);
+      const selectedUnit = document.getElementById('selectUnit').value;
+
+      // Perform conversion
+      let result;
+      if (selectedUnit === 'meters') {
+        result = inputValue * 3.28084; // Convert meters to feet
+        document.getElementById('result').innerText = `${inputValue} meters is equal to ${result.toFixed(2)} feet.`;
+      } else if (selectedUnit === 'feet') {
+        result = inputValue / 3.28084; // Convert feet to meters
+        document.getElementById('result').innerText = `${inputValue} feet is equal to ${result.toFixed(2)} meters.`;
+      } else {
+        document.getElementById('result').innerText = 'Invalid unit selected.';
+      }
+    }
+  </script>
+
+</body>
+</html>
